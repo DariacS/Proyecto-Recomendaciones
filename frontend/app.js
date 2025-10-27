@@ -1,7 +1,6 @@
 // frontend/app.js
 
 // --- CONFIGURACIÓN ---
-const OPENWEATHER_KEY = "d293c492a381fca5eee5d10e5f7abc14"; // ¡Su clave de OWM!
 const API_BASE_URL = "http://127.0.0.1:8000/api/v1/recommendations/";
 
 // --- ELEMENTOS DEL DOM ---
