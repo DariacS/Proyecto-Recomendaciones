@@ -1,0 +1,60 @@
+/* frontend/style.css */
+
+/* --- Widget de Clima (Actualizado) --- */
+/* Ya no es 'position: fixed'. Ahora es parte del flujo. */
+/* Le damos un ancho mínimo y fijo para que se comporte bien en el flex container */
+#weather-widget {
+    min-width: 300px;
+    width: 300px;
+    /* transition: transform 0.3s ease-out; */ /* Ya no es necesario */
+}
+
+/* En móvil, el widget (que está después del título) tendrá ancho completo */
+@media (max-width: 767.98px) {
+    #weather-widget {
+        width: 100%;
+        min-width: 100%;
+    }
+}
+
+
+/* --- Carrusel Horizontal (Actualizado) --- */
+.horizontal-scroll-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding-bottom: 1rem;
+    
+    /* Eliminamos el padding lateral para el efecto "full-bleed" */
+    padding-left: 0;
+    padding-right: 0;
+    
+    /* Evita que se corte el 'box-shadow' de las tarjetas */
+    clip-path: inset(0 0 -10px -10px);
+}
+
+.scroll-card {
+    display: inline-block;
+    width: 300px;
+    margin-right: 1rem;
+    white-space: normal;
+    vertical-align: top;
+}
+
+/* --- NUEVO: Añade padding al primer y último elemento del carrusel --- */
+/* Esto alinea el inicio del scroll con los títulos (que tienen px-4) */
+.scroll-card:first-child {
+    margin-left: 1.5rem; /* 1.5rem es el padding de px-4 */
+}
+.scroll-card:last-child {
+    margin-right: 1.5rem; /* 1.5rem es el padding de px-4 */
+}
+
+
+/* --- Imágenes de Tarjetas (Sin cambios) --- */
+.movie-poster-img,
+.restaurant-photo-img {
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
